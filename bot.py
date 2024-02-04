@@ -8,6 +8,7 @@ from aiogram.contrib.fsm_storage.redis import RedisStorage2
 from tgbot.config import load_config
 from tgbot.filters.admin import AdminFilter
 from tgbot.handlers.TestingInline import register_inline
+from tgbot.handlers.TestingPayments import register_payments
 from tgbot.handlers.TestingReply import register_reply
 from tgbot.handlers.TestingStates import register_test
 from tgbot.handlers.admin import register_admin
@@ -37,6 +38,7 @@ def register_all_handlers(dp):
     register_reply(dp)
     register_inline(dp)
     register_test(dp)
+    register_payments(dp)
 
     register_echo(dp)
 
